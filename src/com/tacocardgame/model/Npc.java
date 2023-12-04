@@ -29,19 +29,19 @@ public class Npc extends Player {
                 break;
             case 3:
                 // NPC player 3, range 750 to 1750 milliseconds
-                delay = 750 + (long) (Math.random() * 1000);
+                delay = 550 + (long) (Math.random() * 1200);
                 break;
             case 4:
                 // NPC player 4, range 900 to 2000 milliseconds
-                delay = 900 + (long) (Math.random() * 1100);
+                delay = 600 + (long) (Math.random() * 1100);
                 break;
             case 5:
                 // NPC player 5, range 250 to 3000 milliseconds
-                delay = 250 + (long) (Math.random() * 2750);
+                delay = 500 + (long) (Math.random() * 1000);
                 break;
             default:
                 // Default delay for any other NPCs
-                delay = 1000 + (long) (Math.random() * 1000);
+                delay = 100 + (long) (Math.random() * 1000);
                 break;
         }
 
