@@ -18,13 +18,37 @@ public class Npc extends Player {
 
     @Override
     public Long playerSlaps() {
-        // creates a simulated delay for NPC reaction time.
+        long delay;
+        //trying switch statement, because previous version had player 5 losing every time.
+        //handleSlap() in GameController will use its for-loop to iterate through this swtich
+        // statement./ I haven't accounted for ties yet, so I'm not sure if this is the best way to do it.'
+        switch (getPlayerId()) {
+            case 2:
+                // NPC player 2, range 500 to 1500 milliseconds
+                delay = 500 + (long) (Math.random() * 1000);
+                break;
+            case 3:
+                // NPC player 3, range 750 to 1750 milliseconds
+                delay = 750 + (long) (Math.random() * 1000);
+                break;
+            case 4:
+                // NPC player 4, range 900 to 2000 milliseconds
+                delay = 900 + (long) (Math.random() * 1100);
+                break;
+            case 5:
+                // NPC player 5, range 250 to 3000 milliseconds
+                delay = 250 + (long) (Math.random() * 2750);
+                break;
+            default:
+                // Default delay for any other NPCs
+                delay = 1000 + (long) (Math.random() * 1000);
+                break;
+        }
 
-        long delay = (long)(1000 + Math.random() * 1000); // Delay between 1 to 2 seconds
         try {
             Thread.sleep(delay);
         } catch (InterruptedException e) {
-            // Handle exception
+            Thread.currentThread().interrupt();
         }
         return System.currentTimeMillis(); // Return the current time after the delay
     }
