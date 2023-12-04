@@ -53,15 +53,15 @@ public class Deck {
 
         return temp.get(0);
     }
-
     public void distributeCards(List<Player> players) {
-        int cardsPerPlayer = allCards.size() / players.size();
-        for (Player player : players) {
-            for (int i = 0; i < cardsPerPlayer; i++) {
-                player.getPlayerHand().add(nextCard());
-            }
+        int index = 0;
+        while (!allCards.isEmpty()) {
+            players.get(index % players.size()).getPlayerHand().add(nextCard());
+            index++;
         }
     }
+
+
 
 
     public static String getAsciiCardType(CardType cardType){      ///get ascii art by card type

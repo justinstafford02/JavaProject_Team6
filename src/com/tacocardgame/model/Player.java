@@ -62,6 +62,9 @@ public abstract class Player {
     }
 
     public Card takeTurn(Pile pile, int wordIndex) {
+        if(playerHand.isEmpty()) {
+            throw new NoSuchElementException("No cards are left to flip");
+        }
         Card cardFlipped = playerFlipsCard(pile);
         CardType cardType = cardFlipped.getType();
         String asciiArt = Deck.getAsciiCardType(cardType);
