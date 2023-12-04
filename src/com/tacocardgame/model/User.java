@@ -27,7 +27,6 @@ public class User extends Player {
     public Long playerSlaps() {
         long startTime = System.currentTimeMillis();
         long maxDuration = 3000; // 3 seconds in milliseconds
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("SlapTime! Press Enter to slap!");
 
@@ -35,17 +34,13 @@ public class User extends Player {
             long currentTime = System.currentTimeMillis();
             if (scanner.hasNextLine()) {
                 scanner.nextLine();
-                return Math.min(currentTime - startTime, maxDuration);
-                //currentTime is time in milliseconds
+                long responseTime = Math.min(currentTime - startTime, maxDuration);
+                System.out.println("You slapped in " + responseTime + " milliseconds!");
+                return responseTime;
             }
             if (currentTime - startTime >= maxDuration) {
+                System.out.println("Time's up! 3 seconds have passed.");
                 return maxDuration;
-                //if anything other than "Enter" is pushed or if output time is greater than 3
-                // seconds,
-                // user will be gifted a 3 second response.  This solves input errors. A spacebar entry
-                // will get you 3 seconds, just like a "b" entry would.  We treat slow responses the
-                // same as wrong responses.  Later, on we can add functionality to partition "outside
-                // threshholds" responses in a separate thread.
             }
             try {
                 Thread.sleep(100);
