@@ -37,10 +37,10 @@ public class BoardView {
         }
     }
 
-    public void showLoser(Player loser) {
-        int cardCount = loser.getPlayerHand().size(); // Assuming this gets the number of cards in hand
-        System.out.printf("\n\"%s loses and picks up %d cards.\"\n", loser.getName(), cardCount);
+    public void showLoser(Player loser, int pileCardCount) {
+        System.out.printf("\n\"%s loses and picks up %d cards.\"\n", loser.getName(), pileCardCount);
     }
+
 
 
 
