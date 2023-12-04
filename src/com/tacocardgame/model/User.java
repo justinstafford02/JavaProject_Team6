@@ -7,7 +7,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.concurrent.*;
 
-
 public class User extends Player {
 
     public User(String name) {
