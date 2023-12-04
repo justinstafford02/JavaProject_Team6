@@ -150,6 +150,7 @@ public class GameController {
         // Display slap times and loser in BoardView
         boardView.displaySlapTimes(playerSlapTimes);
         boardView.showLoser(lastToSlap, pileCardCount);
+        boardView.displayPlayerCardCounts(players);
     }
 
     private boolean hasMatch(Card flippedCard, int wordIndex) {
