@@ -141,8 +141,8 @@ public class GameController {
             long slapTime = player.playerSlaps();
             playerSlapTimes.put(player, slapTime);
         }
-
-        int pileCardCount = pile.dequeToArrayList().size();
+        //change pileCardCount to the number of cards in the pile
+        int pileCardCount = pile.getSize();
         Player lastToSlap = determineLastToSlap(playerSlapTimes);
         lastToSlap.addCardsToPlayerHand(pile.dequeToArrayList());
         pile.clearPile();
