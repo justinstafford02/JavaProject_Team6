@@ -159,7 +159,7 @@ public class GameController {
     }
 
     private Player determineLastToSlap(Map<Player, Long> playerSlapTimes) {
-        return Collections.max(playerSlapTimes.entrySet(), Map.Entry.comparingByValue()).getKey
+        return Collections.max(playerSlapTimes.entrySet(), Map.Entry.comparingByValue()).getKey();
         //page 412-Digging Deeper Java.
     }
 }
