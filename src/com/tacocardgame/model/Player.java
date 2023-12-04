@@ -1,5 +1,7 @@
 package com.tacocardgame.model;
 
+import com.apps.util.Console;
+
 import java.util.*;
 
 public abstract class Player {
@@ -64,10 +66,10 @@ public abstract class Player {
         CardType cardType = cardFlipped.getType();
         String asciiArt = Deck.getAsciiCardType(cardType);
         String playerStatement = playerSays(wordIndex);
-
-        System.out.println(getName() + " flipped " + cardFlipped.getType() + " and says "
-                + playerStatement);
-        System.out.println(asciiArt);
+        Console.pause(2000); // 2 seconds pause
+//        System.out.println(getName() + " flipped " + cardFlipped.getType() + " and says "
+//                + playerStatement);
+//        System.out.println(asciiArt);
         return cardFlipped;
     }
 
@@ -85,6 +87,6 @@ public abstract class Player {
         return findPosition != null ? findPosition.getLabel() : "Illegal card position";
     }
 
-       public abstract Long playerSlaps();
+    public abstract Long playerSlaps();
 
 }
