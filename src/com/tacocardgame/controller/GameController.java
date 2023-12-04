@@ -11,13 +11,13 @@ import java.nio.file.Path;
 import java.util.*;
 
 public class GameController {
-    private Deck deck;
-    private Prompter prompter = new Prompter(new Scanner(System.in));
-    private List<Player> players;
-    private Pile pile;
+    private final Deck deck;
+    private final Prompter prompter = new Prompter(new Scanner(System.in));
+    private final List<Player> players;
+    private final Pile pile;
     private Player winner;
     private boolean gameWon = false;
-    private BoardView boardView;
+    private final BoardView boardView;
     int currentPlayerIndex = 0;
 
     public GameController() throws IOException {
@@ -72,9 +72,16 @@ public class GameController {
     }
 
     private String promptForPlayerName() {
-        String playerName = prompter.prompt("Please enter your name: ");
+        String playerName = "";
+        while (playerName == null || playerName.trim().isEmpty()) {
+            playerName = prompter.prompt("Please enter your name: ");
+            if (playerName == null || playerName.trim().isEmpty()) {
+                System.out.println("Name cannot be empty. Please enter a valid name.");
+            }
+        }
         return playerName;
     }
+
 
     public void playGame() {
         Console.clear();
@@ -139,7 +146,9 @@ public class GameController {
         lastToSlap.addCardsToPlayerHand(pile.dequeToArrayList());
         pile.clearPile();
 
-        boardView.showLoser(lastToSlap); // Show loser on the board view
+        // Display slap times and loser in BoardView
+        boardView.displaySlapTimes(playerSlapTimes);
+        boardView.showLoser(lastToSlap);
     }
 
     private boolean hasMatch(Card flippedCard, int wordIndex) {
