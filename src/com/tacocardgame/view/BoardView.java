@@ -41,8 +41,14 @@ public class BoardView {
         System.out.printf("\n\"%s loses and picks up %d cards.\"\n", loser.getName(), pileCardCount);
     }
 
+    public void displayPlayerCardCounts(Collection<Player> players) {
+        System.out.println("\nPlayer Card Count:");
+        System.out.println("----------------------");
 
-
+        for (Player player : players) {
+            System.out.printf("%s: %d\n", player.getName(), player.getPlayerHand().size());
+        }
+    }
 
     public void show(Collection<Player> players) {
 
