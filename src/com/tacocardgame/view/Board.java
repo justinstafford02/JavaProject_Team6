@@ -37,4 +37,3 @@ public class Board {
         return cardImages.get(type);
     }
 }
-
