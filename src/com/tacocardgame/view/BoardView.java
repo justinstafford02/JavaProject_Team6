@@ -1,7 +1,11 @@
 package com.tacocardgame.view;
 
 import com.tacocardgame.model.*;
+
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 public class BoardView {
 
@@ -13,14 +17,32 @@ public class BoardView {
 
     }
 
-    public void showLoser(Player loser) {
-        System.out.println("Loser of the slap: " + loser.getName());
-    }
-
     public void displayTurnInfo(String playerName, String playerStates, String asciiArt) {
         System.out.println(playerName + " says: " + playerStates);
-        System.out.println(playerName + " flips a card and reveals: " + asciiArt);
+        System.out.println(playerName + " flips a card and reveals: ");
+        System.out.println(asciiArt);
     }
+
+    public void displaySlapTimes(Map<Player, Long> playerSlapTimes) {
+        // Sort the entries by value (slap time)
+        List<Map.Entry<Player, Long>> sortedEntries = new ArrayList<>(playerSlapTimes.entrySet());
+        sortedEntries.sort(Map.Entry.comparingByValue());
+
+        System.out.println("\nSlap Results:");
+        System.out.println("---------------------");
+
+        // shows all player names and slap time
+        for (Map.Entry<Player, Long> entry : sortedEntries) {
+            System.out.printf("%s: %.2f seconds\n", entry.getKey().getName(), entry.getValue() / 1000.0);
+        }
+    }
+
+    public void showLoser(Player loser) {
+        int cardCount = loser.getPlayerHand().size(); // Assuming this gets the number of cards in hand
+        System.out.printf("\n\"%s loses and picks up %d cards.\"\n", loser.getName(), cardCount);
+    }
+
+
 
     public void show(Collection<Player> players) {
 
