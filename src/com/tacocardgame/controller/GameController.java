@@ -142,13 +142,14 @@ public class GameController {
             playerSlapTimes.put(player, slapTime);
         }
 
+        int pileCardCount = pile.dequeToArrayList().size();
         Player lastToSlap = determineLastToSlap(playerSlapTimes);
         lastToSlap.addCardsToPlayerHand(pile.dequeToArrayList());
         pile.clearPile();
 
         // Display slap times and loser in BoardView
         boardView.displaySlapTimes(playerSlapTimes);
-        boardView.showLoser(lastToSlap);
+        boardView.showLoser(lastToSlap, pileCardCount);
     }
 
     private boolean hasMatch(Card flippedCard, int wordIndex) {
