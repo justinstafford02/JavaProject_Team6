@@ -1,0 +1,16 @@
+        GGGGGGGGGGGGG                                           tttt          
+     GGG::::::::::::G                                        ttt:::t          
+   GG:::::::::::::::G                                        t:::::t          
+  G:::::GGGGGGGG::::G                                        t:::::t          
+ G:::::G       GGGGGG   ooooooooooo     aaaaaaaaaaaaa  ttttttt:::::ttttttt    
+G:::::G               oo:::::::::::oo   a::::::::::::a t:::::::::::::::::t    
+G:::::G              o:::::::::::::::o  aaaaaaaaa:::::at:::::::::::::::::t    
+G:::::G    GGGGGGGGGGo:::::ooooo:::::o           a::::atttttt:::::::tttttt    
+G:::::G    G::::::::Go::::o     o::::o    aaaaaaa:::::a      t:::::t          
+G:::::G    GGGGG::::Go::::o     o::::o  aa::::::::::::a      t:::::t          
+G:::::G        G::::Go::::o     o::::o a::::aaaa::::::a      t:::::t          
+ G:::::G       G::::Go::::o     o::::oa::::a    a:::::a      t:::::t    tttttt
+  G:::::GGGGGGGG::::Go:::::ooooo:::::oa::::a    a:::::a      t::::::tttt:::::t
+   GG:::::::::::::::Go:::::::::::::::oa:::::aaaa::::::a      tt::::::::::::::t
+     GGG::::::GGG:::G oo:::::::::::oo  a::::::::::aa:::a       tt:::::::::::tt
+        GGGGGG   GGGG   ooooooooooo     aaaaaaaaaa  aaaa         ttttttttttt 

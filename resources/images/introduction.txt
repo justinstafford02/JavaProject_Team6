@@ -1,0 +1,10 @@
+Introduction
+
+Taco, Cat, Goat, Cheese, Pizza!
+
+Keep this crazy string of words in mind. 
+
+As soon as there is a match between a card and a spoken word,
+race to "slap" the pile of cards.  Just don't be last! 
+
+The last person to do so must take them all!

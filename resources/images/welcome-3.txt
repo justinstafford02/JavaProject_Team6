@@ -1,0 +1,16 @@
+        CCCCCCCCCCCCC                          tttt          
+     CCC::::::::::::C                       ttt:::t          
+   CC:::::::::::::::C                       t:::::t          
+  C:::::CCCCCCCC::::C                       t:::::t          
+ C:::::C       CCCCCC  aaaaaaaaaaaaa  ttttttt:::::ttttttt    
+C:::::C                a::::::::::::a t:::::::::::::::::t    
+C:::::C                aaaaaaaaa:::::at:::::::::::::::::t    
+C:::::C                         a::::atttttt:::::::tttttt    
+C:::::C                  aaaaaaa:::::a      t:::::t          
+C:::::C                aa::::::::::::a      t:::::t          
+C:::::C               a::::aaaa::::::a      t:::::t          
+ C:::::C       CCCCCCa::::a    a:::::a      t:::::t    tttttt
+  C:::::CCCCCCCC::::Ca::::a    a:::::a      t::::::tttt:::::t
+   CC:::::::::::::::Ca:::::aaaa::::::a      tt::::::::::::::t
+     CCC::::::::::::C a::::::::::aa:::a       tt:::::::::::tt
+        CCCCCCCCCCCCC  aaaaaaaaaa  aaaa         ttttttttttt  
