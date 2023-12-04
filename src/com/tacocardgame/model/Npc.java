@@ -50,7 +50,7 @@ public class Npc extends Player {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        return System.currentTimeMillis(); // Return the current time after the delay
+        return delay; // Return the current time after the delay
     }
 
     public void setName(String name) {
