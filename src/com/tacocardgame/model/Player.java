@@ -1,7 +1,5 @@
 package com.tacocardgame.model;
 
-import com.apps.util.Console;
-
 import java.util.*;
 
 public abstract class Player {
@@ -62,17 +60,14 @@ public abstract class Player {
     }
 
     public Card takeTurn(Pile pile, int wordIndex) {
-        if(playerHand.isEmpty()) {
-            throw new NoSuchElementException("No cards are left to flip");
-        }
         Card cardFlipped = playerFlipsCard(pile);
         CardType cardType = cardFlipped.getType();
         String asciiArt = Deck.getAsciiCardType(cardType);
         String playerStatement = playerSays(wordIndex);
-        Console.pause(2000); // 2 seconds pause
-//        System.out.println(getName() + " flipped " + cardFlipped.getType() + " and says "
-//                + playerStatement);
-//        System.out.println(asciiArt);
+
+        System.out.println(getName() + " flipped " + cardFlipped.getType() + " and says "
+                + playerStatement);
+        System.out.println(asciiArt);
         return cardFlipped;
     }
 
