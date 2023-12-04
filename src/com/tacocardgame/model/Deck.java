@@ -62,8 +62,6 @@ public class Deck {
     }
 
 
-
-
     public static String getAsciiCardType(CardType cardType){      ///get ascii art by card type
 
         return nameTacoMap.get(cardType);
