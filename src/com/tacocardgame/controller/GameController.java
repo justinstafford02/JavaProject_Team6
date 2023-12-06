@@ -98,6 +98,13 @@ public class GameController {
             boardView.displayTurnInfo(currentPlayer.getName(), playerStates,
                     Deck.getAsciiCardType(flippedCard.getType()));
 
+            // Checking if the current player has won
+            if (currentPlayer.getPlayerHand().isEmpty()) {
+                gameWon = true;
+                winner = currentPlayer;
+                break;
+            }
+
             // Check if a handle slap is needed
             if (hasMatch(flippedCard, wordIndex)) {
                 System.out.println("Match found! Players prepare to slap!");
@@ -110,19 +117,12 @@ public class GameController {
                 // This should skip the rest of the loop, start a new round with wordIndex = 0
             }
 
-            // Checking if the current player has won
-            if (currentPlayer.getPlayerHand().isEmpty()) {
-                gameWon = true;
-                winner = currentPlayer;
-                break;
-            }
-
             // Move to the next word
             wordIndex = (wordIndex + 1) % CardType.values().length;
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size(); // Move to next player
         }
         // This is used to keep track of the current word to be said.  Previously, everything was
-        // tied to current player index. previously causing disconntect as the players were
+        // tied to current player index. This caused disconntect as the players were
         // cycling through. For instance, if the current player is the last player in the
         // 'players' list, then the current player index is the index of the first player in the
         // 'players' list.  This was the wrong outcome.  This was affecting what players
